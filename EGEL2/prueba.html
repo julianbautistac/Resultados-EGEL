@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Formulario con Dos Listas Desplegables Alineadas</title>
+    <style>
+        .form-container {
+            display: flex; /* Utilizamos flexbox para alinear horizontalmente los elementos */
+            align-items: center; /* Centra verticalmente los elementos en el contenedor */
+        }
+
+        .select-container {
+            margin-right: 20px; /* Agrega un espacio entre las listas desplegables */
+        }
+    </style>
+</head>
+<body>
+    <h2>Formulario con Dos Listas Desplegables Alineadas</h2>
+    <form action="procesar_formulario.php" method="post">
+        <div class="form-container">
+            <div class="select-container">
+                <label for="lista1">Lista 1:</label>
+                <select id="lista1" name="lista1">
+                    <option value="opcion1">Opción 1</option>
+                    <option value="opcion2">Opción 2</option>
+                    <option value="opcion3">Opción 3</option>
+                </select>
+            </div>
+            
+            <div class="select-container">
+                <label for="lista2">Lista 2:</label>
+                <select id="lista2" name="lista2">
+                    <option value="opcion4">Opción 4</option>
+                    <option value="opcion5">Opción 5</option>
+                    <option value="opcion6">Opción 6</option>
+                </select>
+            </div>
+        </div>
+
+        <button type="submit">Enviar</button>
+    </form>
+</body>
+</html>

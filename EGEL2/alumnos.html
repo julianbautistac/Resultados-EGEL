@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Registro de alumnos</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Formulario de Alta de Estudiantes</h2>
+        <form action="procesar_formulario.php" method="post">
+
+            <input type="text" id="nombre" name="nombre" placeholder="Nombre" required>
+            <input type="text" id="apellido1" name="apellido1" placeholder="Apellido Paterno" required>
+            <input type="text" id="apellido2" name="apellido2" placeholder="Apellido Materno" required>
+            <input type="number" id="amatricula" name="amatricula" placeholder="Matrícula" required><br>
+            <label for="fecha_egel">Fecha de aplicación:</label>
+            <input type="date" id="egel_date" name="egel_date" required>
+
+            <label for="carrera">Carrera:</label>
+            <select id="carrera" name="carrera">
+                <option value="">---Seleccione---</option>
+                <option value="1">Ingeniería civil</option>
+                <option value="2">Ingeniero industrial</option>
+                <option value="3">Ingeniería en electrónica</option>
+                <option value="4">Ingeniería en computación</option>
+                <option value="5">Bioingeniería</option>
+                <option value="6">Nanotecnología</option>
+                <option value="7">Arquitectura</option>
+                <option value="8">Ingeniería de software</option>
+            </select>
+            <div class="periodos-container">
+                <label for="p-ingreso">Periodo de ingreso:</label>
+                <input type="number" id="anio1" name="anio1" min="1980" max="2099" step="1" required>
+                <select id="periodo1" name="periodo1">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <div class="periodos-container">
+                <label for="p-egreso">Periodo de egreso:</label>
+                <input type="number" id="anio2" name="anio2" min="1980" max="2099" step="1" required>
+                <select id="periodo2" name="periodo2">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+            <label for="modalidad">Modalidad de titulación:</label>
+            <select id="modalidad" name="modalidad">
+                <option value="">---Seleccione---</option>
+                <option value="1">EGEL</option>
+                <option value="2">Ejercicio Profesional</option>
+                <option value="3">Mérito Escolar</option>
+                <option value="4">PEBC</option>
+                <option value="5">Promedio General de Calificaciones</option>
+                <option value="6">Tésis</option>
+            </select>
+
+            <div class="periodos-container">
+                <label for="p-titulacion">Periodo de titulación:</label>
+                <input type="number" id="anio3" name="anio3" min="1980" max="2099" step="1" required>
+                <select id="periodo3" name="periodo3">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                </select>
+            </div>
+
+            <button type="submit">Registrar estudiante</button>
+            <button type="reset">Cancelar</button>
+        </form>
+</body>
+
+</html>
